@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Pic2 = new System.Windows.Forms.PictureBox();
             this.Pic3 = new System.Windows.Forms.PictureBox();
             this.Pic4 = new System.Windows.Forms.PictureBox();
@@ -48,91 +49,91 @@
             // 
             // Pic2
             // 
-            this.Pic2.Image = global::Memory_Thatcher.Properties.Resources.Roni;
+            this.Pic2.Image = ((System.Drawing.Image)(resources.GetObject("Pic2.Image")));
             this.Pic2.Location = new System.Drawing.Point(318, 12);
             this.Pic2.Name = "Pic2";
-            this.Pic2.Size = new System.Drawing.Size(300, 374);
+            this.Pic2.Size = new System.Drawing.Size(280, 348);
             this.Pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic2.TabIndex = 7;
             this.Pic2.TabStop = false;
-            this.Pic2.Click += new System.EventHandler(this.Pic2_Click);
+            this.Pic2.Click += new System.EventHandler(this.Pic_Click);
             // 
             // Pic3
             // 
-            this.Pic3.Image = global::Memory_Thatcher.Properties.Resources.Roni;
+            this.Pic3.Image = ((System.Drawing.Image)(resources.GetObject("Pic3.Image")));
             this.Pic3.Location = new System.Drawing.Point(624, 12);
             this.Pic3.Name = "Pic3";
-            this.Pic3.Size = new System.Drawing.Size(300, 374);
+            this.Pic3.Size = new System.Drawing.Size(280, 348);
             this.Pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic3.TabIndex = 6;
             this.Pic3.TabStop = false;
-            this.Pic3.Click += new System.EventHandler(this.Pic3_Click);
+            this.Pic3.Click += new System.EventHandler(this.Pic_Click);
             // 
             // Pic4
             // 
-            this.Pic4.Image = global::Memory_Thatcher.Properties.Resources.Roni;
+            this.Pic4.Image = ((System.Drawing.Image)(resources.GetObject("Pic4.Image")));
             this.Pic4.Location = new System.Drawing.Point(930, 12);
             this.Pic4.Name = "Pic4";
-            this.Pic4.Size = new System.Drawing.Size(300, 374);
+            this.Pic4.Size = new System.Drawing.Size(280, 348);
             this.Pic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic4.TabIndex = 5;
             this.Pic4.TabStop = false;
-            this.Pic4.Click += new System.EventHandler(this.Pic4_Click);
+            this.Pic4.Click += new System.EventHandler(this.Pic_Click);
             // 
             // Pic5
             // 
-            this.Pic5.Image = global::Memory_Thatcher.Properties.Resources.Roni;
+            this.Pic5.Image = ((System.Drawing.Image)(resources.GetObject("Pic5.Image")));
             this.Pic5.Location = new System.Drawing.Point(12, 392);
             this.Pic5.Name = "Pic5";
-            this.Pic5.Size = new System.Drawing.Size(300, 374);
+            this.Pic5.Size = new System.Drawing.Size(280, 348);
             this.Pic5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic5.TabIndex = 4;
             this.Pic5.TabStop = false;
-            this.Pic5.Click += new System.EventHandler(this.Pic5_Click);
+            this.Pic5.Click += new System.EventHandler(this.Pic_Click);
             // 
             // Pic6
             // 
-            this.Pic6.Image = global::Memory_Thatcher.Properties.Resources.Roni;
+            this.Pic6.Image = ((System.Drawing.Image)(resources.GetObject("Pic6.Image")));
             this.Pic6.Location = new System.Drawing.Point(318, 392);
             this.Pic6.Name = "Pic6";
-            this.Pic6.Size = new System.Drawing.Size(300, 374);
+            this.Pic6.Size = new System.Drawing.Size(280, 348);
             this.Pic6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic6.TabIndex = 3;
             this.Pic6.TabStop = false;
-            this.Pic6.Click += new System.EventHandler(this.Pic6_Click);
+            this.Pic6.Click += new System.EventHandler(this.Pic_Click);
             // 
             // Pic8
             // 
-            this.Pic8.Image = global::Memory_Thatcher.Properties.Resources.Roni;
+            this.Pic8.Image = ((System.Drawing.Image)(resources.GetObject("Pic8.Image")));
             this.Pic8.Location = new System.Drawing.Point(930, 392);
             this.Pic8.Name = "Pic8";
-            this.Pic8.Size = new System.Drawing.Size(300, 374);
+            this.Pic8.Size = new System.Drawing.Size(280, 348);
             this.Pic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic8.TabIndex = 2;
             this.Pic8.TabStop = false;
-            this.Pic8.Click += new System.EventHandler(this.Pic8_Click);
+            this.Pic8.Click += new System.EventHandler(this.Pic_Click);
             // 
             // Pic7
             // 
-            this.Pic7.Image = global::Memory_Thatcher.Properties.Resources.Roni;
+            this.Pic7.Image = ((System.Drawing.Image)(resources.GetObject("Pic7.Image")));
             this.Pic7.Location = new System.Drawing.Point(624, 392);
             this.Pic7.Name = "Pic7";
-            this.Pic7.Size = new System.Drawing.Size(300, 374);
+            this.Pic7.Size = new System.Drawing.Size(280, 348);
             this.Pic7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic7.TabIndex = 1;
             this.Pic7.TabStop = false;
-            this.Pic7.Click += new System.EventHandler(this.Pic7_Click);
+            this.Pic7.Click += new System.EventHandler(this.Pic_Click);
             // 
             // Pic1
             // 
             this.Pic1.Image = global::Memory_Thatcher.Properties.Resources.Roni;
             this.Pic1.Location = new System.Drawing.Point(12, 12);
             this.Pic1.Name = "Pic1";
-            this.Pic1.Size = new System.Drawing.Size(300, 374);
+            this.Pic1.Size = new System.Drawing.Size(280, 348);
             this.Pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic1.TabIndex = 0;
             this.Pic1.TabStop = false;
-            this.Pic1.Click += new System.EventHandler(this.Pic1_Click);
+            this.Pic1.Click += new System.EventHandler(this.Pic_Click);
             // 
             // Form1
             // 

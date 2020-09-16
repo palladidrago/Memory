@@ -73,9 +73,9 @@ namespace Memory_Thatcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Roni {
+        internal static System.Drawing.Bitmap rami {
             get {
-                object obj = ResourceManager.GetObject("Roni", resourceCulture);
+                object obj = ResourceManager.GetObject("rami", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
