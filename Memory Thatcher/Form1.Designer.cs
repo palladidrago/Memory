@@ -125,7 +125,7 @@
             // 
             // Pic1
             // 
-            this.Pic1.Image = global::Memory_Thatcher.Properties.Resources.rami;
+            this.Pic1.Image = global::Memory_Thatcher.Properties.Resources.Back;
             this.Pic1.Location = new System.Drawing.Point(12, 12);
             this.Pic1.Name = "Pic1";
             this.Pic1.Size = new System.Drawing.Size(280, 348);

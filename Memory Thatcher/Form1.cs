@@ -61,10 +61,39 @@ namespace Memory_Thatcher
         {
             PictureBox p = sender as PictureBox;
             if (!IsImagesMatch(p.Image,Resources.Back)) { p.Image = Resources.Back;   }
-	    else{
-	    char index = p.Name[p.Name.Length-1];if(index > 4){index -= 4;}
-	    p.Image = (Resources.ResourceManager.GetObject($`Pic{index}`) as p.Image.Type();
-	    }
+			else
+			{
+				switch (p.Name)
+				{
+					case "Pic1":
+						p.Image = Resources.Pic1;
+						break;
+					case "Pic2":
+						p.Image = Resources.Pic2;
+						break;
+					case "Pic3":
+						p.Image = Resources.Pic3;
+						break;
+					case "Pic4":
+						p.Image = Resources.Pic4;
+						break;
+					case "Pic5":
+						p.Image = Resources.Pic1;
+						break;
+					case "Pic6":
+						p.Image = Resources.Pic2;
+						break;
+					case "Pic7":
+						p.Image = Resources.Pic3;
+						break;
+					case "Pic8":
+						p.Image = Resources.Pic4;
+						break;
+
+
+				}
+
+			}
         }
      
     }
