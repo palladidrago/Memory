@@ -1,0 +1,10 @@
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\bin\Debug\Memory Thatcher.exe.config
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\bin\Debug\Memory Thatcher.exe
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\bin\Debug\Memory Thatcher.pdb
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\obj\Debug\Memory Thatcher.csprojAssemblyReference.cache
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\obj\Debug\Memory_Thatcher.Form1.resources
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\obj\Debug\Memory_Thatcher.Properties.Resources.resources
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\obj\Debug\Memory Thatcher.csproj.GenerateResource.cache
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\obj\Debug\Memory Thatcher.csproj.CoreCompileInputs.cache
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\obj\Debug\Memory Thatcher.exe
+C:\Users\palla\Documents\Coding\shisharp\Memory Thatcher\Memory Thatcher\obj\Debug\Memory Thatcher.pdb
