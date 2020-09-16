@@ -61,6 +61,10 @@ namespace Memory_Thatcher
         {
             PictureBox p = sender as PictureBox;
             if (!IsImagesMatch(p.Image,Resources.Back)) { p.Image = Resources.Back;   }
+	    else{
+	    char index = p.Name[p.Name.Length-1];if(index > 4){index -= 4;}
+	    p.Image = (Resources.ResourceManager.GetObject($`Pic{index}`) as p.Image.Type();
+	    }
         }
      
     }
