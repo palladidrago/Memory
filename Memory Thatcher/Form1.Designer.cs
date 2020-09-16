@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Pic2 = new System.Windows.Forms.PictureBox();
             this.Pic3 = new System.Windows.Forms.PictureBox();
             this.Pic4 = new System.Windows.Forms.PictureBox();
@@ -49,7 +48,7 @@
             // 
             // Pic2
             // 
-            this.Pic2.Image = ((System.Drawing.Image)(resources.GetObject("Pic2.Image")));
+            this.Pic2.Image = global::Memory_Thatcher.Properties.Resources.Back;
             this.Pic2.Location = new System.Drawing.Point(318, 12);
             this.Pic2.Name = "Pic2";
             this.Pic2.Size = new System.Drawing.Size(280, 348);
@@ -60,7 +59,7 @@
             // 
             // Pic3
             // 
-            this.Pic3.Image = ((System.Drawing.Image)(resources.GetObject("Pic3.Image")));
+            this.Pic3.Image = global::Memory_Thatcher.Properties.Resources.Back;
             this.Pic3.Location = new System.Drawing.Point(624, 12);
             this.Pic3.Name = "Pic3";
             this.Pic3.Size = new System.Drawing.Size(280, 348);
@@ -71,7 +70,7 @@
             // 
             // Pic4
             // 
-            this.Pic4.Image = ((System.Drawing.Image)(resources.GetObject("Pic4.Image")));
+            this.Pic4.Image = global::Memory_Thatcher.Properties.Resources.Back;
             this.Pic4.Location = new System.Drawing.Point(930, 12);
             this.Pic4.Name = "Pic4";
             this.Pic4.Size = new System.Drawing.Size(280, 348);
@@ -82,7 +81,7 @@
             // 
             // Pic5
             // 
-            this.Pic5.Image = ((System.Drawing.Image)(resources.GetObject("Pic5.Image")));
+            this.Pic5.Image = global::Memory_Thatcher.Properties.Resources.Back;
             this.Pic5.Location = new System.Drawing.Point(12, 392);
             this.Pic5.Name = "Pic5";
             this.Pic5.Size = new System.Drawing.Size(280, 348);
@@ -93,7 +92,7 @@
             // 
             // Pic6
             // 
-            this.Pic6.Image = ((System.Drawing.Image)(resources.GetObject("Pic6.Image")));
+            this.Pic6.Image = global::Memory_Thatcher.Properties.Resources.Back;
             this.Pic6.Location = new System.Drawing.Point(318, 392);
             this.Pic6.Name = "Pic6";
             this.Pic6.Size = new System.Drawing.Size(280, 348);
@@ -104,7 +103,7 @@
             // 
             // Pic8
             // 
-            this.Pic8.Image = ((System.Drawing.Image)(resources.GetObject("Pic8.Image")));
+            this.Pic8.Image = global::Memory_Thatcher.Properties.Resources.Back;
             this.Pic8.Location = new System.Drawing.Point(930, 392);
             this.Pic8.Name = "Pic8";
             this.Pic8.Size = new System.Drawing.Size(280, 348);
@@ -115,7 +114,7 @@
             // 
             // Pic7
             // 
-            this.Pic7.Image = ((System.Drawing.Image)(resources.GetObject("Pic7.Image")));
+            this.Pic7.Image = global::Memory_Thatcher.Properties.Resources.Back;
             this.Pic7.Location = new System.Drawing.Point(624, 392);
             this.Pic7.Name = "Pic7";
             this.Pic7.Size = new System.Drawing.Size(280, 348);
@@ -126,7 +125,7 @@
             // 
             // Pic1
             // 
-            this.Pic1.Image = global::Memory_Thatcher.Properties.Resources.Roni;
+            this.Pic1.Image = global::Memory_Thatcher.Properties.Resources.rami;
             this.Pic1.Location = new System.Drawing.Point(12, 12);
             this.Pic1.Name = "Pic1";
             this.Pic1.Size = new System.Drawing.Size(280, 348);

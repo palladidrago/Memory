@@ -60,14 +60,7 @@ namespace Memory_Thatcher
 		private void Pic_Click(object sender, EventArgs e)
         {
             PictureBox p = sender as PictureBox;
-            if (IsImagesMatch(p.Image,Resources.Back)) { p.Image = Resources.Test;   }
-            else { 
-                switch p.Image 
-
-                
-            
-            
-            }
+            if (!IsImagesMatch(p.Image,Resources.Back)) { p.Image = Resources.Back;   }
         }
      
     }
