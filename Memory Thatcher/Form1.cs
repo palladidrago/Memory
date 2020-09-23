@@ -19,7 +19,11 @@ namespace Memory_Thatcher
             InitializeComponent();
         }
 
-		//מעתיקים רק את הפעולה לתוך הטופס שלכם בתוך המחלקה
+
+		
+		
+
+		//Checks if 2 Images are the same image
 		public bool IsImagesMatch(Image image1, Image image2)
 		{
 			try
@@ -57,41 +61,21 @@ namespace Memory_Thatcher
 			//we made it this far so the images must match
 			return true;
 		}
+
+
+		Image[] imageArr = { Resources.Pic1, Resources.Pic2, Resources.Pic3, Resources.Pic4 };
+
+
 		private void Pic_Click(object sender, EventArgs e)
         {
             PictureBox p = sender as PictureBox;
             if (!IsImagesMatch(p.Image,Resources.Back)) { p.Image = Resources.Back;   }
 			else
 			{
-				switch (p.Name)
-				{
-					case "Pic1":
-						p.Image = Resources.Pic1;
-						break;
-					case "Pic2":
-						p.Image = Resources.Pic2;
-						break;
-					case "Pic3":
-						p.Image = Resources.Pic3;
-						break;
-					case "Pic4":
-						p.Image = Resources.Pic4;
-						break;
-					case "Pic5":
-						p.Image = Resources.Pic1;
-						break;
-					case "Pic6":
-						p.Image = Resources.Pic2;
-						break;
-					case "Pic7":
-						p.Image = Resources.Pic3;
-						break;
-					case "Pic8":
-						p.Image = Resources.Pic4;
-						break;
+				Console.WriteLine(p.Name[-1]);
+                int imageNum = int.Parse(p.Name.Substring(p.Name.Length - 1)) - 1;
 
-
-				}
+				p.Image = imageArr[imageNum % 4];
 
 			}
         }
