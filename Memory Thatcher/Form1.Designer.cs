@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Pic2 = new System.Windows.Forms.PictureBox();
             this.Pic3 = new System.Windows.Forms.PictureBox();
             this.Pic4 = new System.Windows.Forms.PictureBox();
@@ -36,6 +37,7 @@
             this.Pic8 = new System.Windows.Forms.PictureBox();
             this.Pic7 = new System.Windows.Forms.PictureBox();
             this.Pic1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Pic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic4)).BeginInit();
@@ -134,6 +136,11 @@
             this.Pic1.TabStop = false;
             this.Pic1.Click += new System.EventHandler(this.Pic_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,6 +178,7 @@
         private System.Windows.Forms.PictureBox Pic4;
         private System.Windows.Forms.PictureBox Pic3;
         private System.Windows.Forms.PictureBox Pic2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

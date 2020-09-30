@@ -17,11 +17,21 @@ namespace Memory_Thatcher
         public Form1()
         {
             InitializeComponent();
-        }
+			SetImagesArray();
+		}
 
 
-		
-		
+		Image[] imageArr;
+		private bool m_IsFirst = true;
+		private PictureBox m_FirstPictureBox;
+		private PictureBox m_SecondPictureBox;
+		public void SetImagesArray()
+        {
+			Image[] imageArrNew = { Resources.Pic1, Resources.Pic2, Resources.Pic3, Resources.Pic4 };
+			imageArr = imageArrNew;
+		}
+
+
 
 		//Checks if 2 Images are the same image
 		public bool IsImagesMatch(Image image1, Image image2)
@@ -63,22 +73,34 @@ namespace Memory_Thatcher
 		}
 
 
-		Image[] imageArr = { Resources.Pic1, Resources.Pic2, Resources.Pic3, Resources.Pic4 };
-
+		
 
 		private void Pic_Click(object sender, EventArgs e)
         {
             PictureBox p = sender as PictureBox;
-            if (!IsImagesMatch(p.Image,Resources.Back)) { p.Image = Resources.Back;   }
+            if (!IsImagesMatch(p.Image,Resources.Back)) p.Image = Resources.Back;
 			else
 			{
-				Console.WriteLine(p.Name[-1]);
                 int imageNum = int.Parse(p.Name.Substring(p.Name.Length - 1)) - 1;
-
 				p.Image = imageArr[imageNum % 4];
 
 			}
+
+			if (!m_IsFirst) { m_SecondPictureBox = p; timer1.Start(); }
+			else m_FirstPictureBox = p;
+
+			m_IsFirst = !m_IsFirst;
         }
-     
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+			if (!IsImagesMatch(m_FirstPictureBox.Image, m_SecondPictureBox.Image))
+			{
+				m_FirstPictureBox.Image = Resources.Back;
+				m_SecondPictureBox.Image = Resources.Back;
+			}
+
+			timer1.Stop();
+        }
     }
 }
