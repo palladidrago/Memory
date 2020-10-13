@@ -22,7 +22,6 @@ namespace Memory_Thatcher
 		}
 
 		private int lifeState = 6;
-		private int matchedImagesCount = 0;
 		private int gotCount;
 		Image[] imageArr;
 		private bool m_IsFirst = true;
@@ -55,6 +54,10 @@ namespace Memory_Thatcher
 			Pic6.Enabled = true;
 			Pic7.Enabled = true;
 			Pic8.Enabled = true;
+			lifeState = 6;
+			H1.BackgroundImage = Resources.heart1;
+			H2.BackgroundImage = Resources.heart1;
+			H3.BackgroundImage = Resources.heart1;
 		}
 		private void Swap(int i, int j)
 		{
@@ -76,7 +79,7 @@ namespace Memory_Thatcher
 			
 
 		}
-
+		
 
 
 		//Checks if 2 Images are the same image
@@ -105,15 +108,10 @@ namespace Memory_Thatcher
 				{
 					//whoops, found a non-match, exit the loop
 					//with a false value
+					//Added new code to change the hearts as well when it's a non-match, this code
+					//should be moved somewhere else as it doesn't belong in the scope of this function.
 					if (!(imgHash1[i] == imgHash2[i]))
 					{
-						lifeState--;
-						if (lifeState == 5) { H1.BackgroundImage = Resources.heart2; }
-						else if (lifeState == 4) { H1.BackgroundImage = Resources.heart3; }
-						else if (lifeState == 3) { H2.BackgroundImage = Resources.heart2; }
-						else if (lifeState == 2) { H2.BackgroundImage = Resources.heart3; }
-						else if (lifeState == 1) { H3.BackgroundImage = Resources.heart2; }
-						else if (lifeState == 0) { H3.BackgroundImage = Resources.heart3; EndGame(); }
 						return false;
 					}
 				}
@@ -128,12 +126,14 @@ namespace Memory_Thatcher
 		}
 
 
-		
+
 
 		private void Pic_Click(object sender, EventArgs e)
-        {
-            PictureBox p = sender as PictureBox;
-            if (!IsImagesMatch(p.Image,Resources.Back)) p.Image = Resources.Back;
+		{
+			PictureBox p = sender as PictureBox;
+			if (!IsImagesMatch(p.Image, Resources.Back)) {
+				p.Image = Resources.Back;
+			}
 			else
 			{
                 int imageNum = int.Parse(p.Name.Substring(p.Name.Length - 1)) - 1;
@@ -153,8 +153,19 @@ namespace Memory_Thatcher
 			{
 				m_FirstPictureBox.Image = Resources.Back;
 				m_SecondPictureBox.Image = Resources.Back;
+				lifeState--;
+				switch (lifeState)
+				{
+					case 5: H1.BackgroundImage = Resources.heart2; break;
+					case 4: H1.BackgroundImage = Resources.heart3; break;
+					case 3: H2.BackgroundImage = Resources.heart2; break;
+					case 2: H2.BackgroundImage = Resources.heart3; break;
+					case 1: H3.BackgroundImage = Resources.heart2; break;
+					case 0: H3.BackgroundImage = Resources.heart3; EndGame(); break;
+				}
 			}
-			else {
+			else
+			{
 				m_FirstPictureBox.Enabled = false;
 				m_SecondPictureBox.Enabled = false;
 				gotCount++;
