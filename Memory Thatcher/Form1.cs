@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,7 +21,7 @@ namespace Memory_Thatcher
 			SetImagesArray();
 		}
 
-
+		private int gotCount;
 		Image[] imageArr;
 		private bool m_IsFirst = true;
 		private PictureBox m_FirstPictureBox;
@@ -28,7 +29,15 @@ namespace Memory_Thatcher
 
 
 
-
+		private void FlipCards() { 
+			Pic1.Image = Resources.Back;
+			Pic2.Image = Resources.Back;
+			Pic3.Image = Resources.Back;
+			Pic4.Image = Resources.Back;
+			Pic5.Image = Resources.Back;
+			Pic6.Image = Resources.Back;
+			Pic7.Image = Resources.Back;
+			Pic8.Image = Resources.Back;		}
 		private void Swap(int i, int j)
 		{
 			//Swaps 2 pictures in the image array
@@ -118,6 +127,8 @@ namespace Memory_Thatcher
 				m_FirstPictureBox.Image = Resources.Back;
 				m_SecondPictureBox.Image = Resources.Back;
 			}
+			else gotCount++;
+			if (gotCount == 4) { MessageBox.Show("Click to ok to play again.");gotCount = 0;FlipCards(); SetImagesArray(); }
 
 			timer1.Stop();
         }

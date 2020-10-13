@@ -50,7 +50,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Pic4
@@ -146,7 +146,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Memory_Thatcher.Properties.Resources.PepeBack;
-            this.ClientSize = new System.Drawing.Size(1253, 860);
+            this.ClientSize = new System.Drawing.Size(1277, 907);
             this.Controls.Add(this.Pic4);
             this.Controls.Add(this.Pic3);
             this.Controls.Add(this.Pic2);
@@ -166,7 +166,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pic6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic5)).EndInit();
             this.ResumeLayout(false);
-            this.Size = new System.Drawing.Size(970, 760);
 
         }
 
