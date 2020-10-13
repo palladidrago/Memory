@@ -26,6 +26,9 @@ namespace Memory_Thatcher
 		private PictureBox m_FirstPictureBox;
 		private PictureBox m_SecondPictureBox;
 
+
+
+
 		private void Swap(int i, int j)
 		{
 			//Swaps 2 pictures in the image array
@@ -118,5 +121,6 @@ namespace Memory_Thatcher
 
 			timer1.Stop();
         }
+
     }
 }

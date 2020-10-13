@@ -73,6 +73,16 @@ namespace Memory_Thatcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PepeBack {
+            get {
+                object obj = ResourceManager.GetObject("PepeBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pic1 {
             get {
                 object obj = ResourceManager.GetObject("Pic1", resourceCulture);
