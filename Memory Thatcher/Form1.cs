@@ -21,6 +21,8 @@ namespace Memory_Thatcher
 			SetImagesArray();
 		}
 
+		private int lifeState = 6;
+		private int matchedImagesCount = 0;
 		private int gotCount;
 		Image[] imageArr;
 		private bool m_IsFirst = true;
@@ -37,7 +39,23 @@ namespace Memory_Thatcher
 			Pic5.Image = Resources.Back;
 			Pic6.Image = Resources.Back;
 			Pic7.Image = Resources.Back;
-			Pic8.Image = Resources.Back;		}
+			Pic8.Image = Resources.Back;		
+		}
+		private void EndGame()
+        {
+			gotCount = 0;
+			MessageBox.Show("Click to ok to play again.");
+			FlipCards();
+			SetImagesArray();
+			Pic1.Enabled = true;
+			Pic2.Enabled = true;
+			Pic3.Enabled = true;
+			Pic4.Enabled = true;
+			Pic5.Enabled = true;
+			Pic6.Enabled = true;
+			Pic7.Enabled = true;
+			Pic8.Enabled = true;
+		}
 		private void Swap(int i, int j)
 		{
 			//Swaps 2 pictures in the image array
@@ -88,7 +106,16 @@ namespace Memory_Thatcher
 					//whoops, found a non-match, exit the loop
 					//with a false value
 					if (!(imgHash1[i] == imgHash2[i]))
+					{
+						lifeState--;
+						if (lifeState == 5) { H1.BackgroundImage = Resources.heart2; }
+						else if (lifeState == 4) { H1.BackgroundImage = Resources.heart3; }
+						else if (lifeState == 3) { H2.BackgroundImage = Resources.heart2; }
+						else if (lifeState == 2) { H2.BackgroundImage = Resources.heart3; }
+						else if (lifeState == 1) { H3.BackgroundImage = Resources.heart2; }
+						else if (lifeState == 0) { H3.BackgroundImage = Resources.heart3; EndGame(); }
 						return false;
+					}
 				}
 			}
 			catch (Exception ex)
@@ -110,7 +137,7 @@ namespace Memory_Thatcher
 			else
 			{
                 int imageNum = int.Parse(p.Name.Substring(p.Name.Length - 1)) - 1;
-				p.Image = imageArr[imageNum ];
+				p.Image = imageArr[imageNum];
 
 			}
 
@@ -127,8 +154,13 @@ namespace Memory_Thatcher
 				m_FirstPictureBox.Image = Resources.Back;
 				m_SecondPictureBox.Image = Resources.Back;
 			}
-			else gotCount++;
-			if (gotCount == 4) { MessageBox.Show("Click to ok to play again.");gotCount = 0;FlipCards(); SetImagesArray(); }
+			else {
+				m_FirstPictureBox.Enabled = false;
+				m_SecondPictureBox.Enabled = false;
+				gotCount++;
+
+			}
+			if (gotCount == 4) { EndGame(); }
 
 			timer1.Stop();
         }

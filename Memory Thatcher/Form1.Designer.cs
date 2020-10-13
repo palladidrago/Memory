@@ -38,6 +38,9 @@
             this.Pic7 = new System.Windows.Forms.PictureBox();
             this.Pic6 = new System.Windows.Forms.PictureBox();
             this.Pic5 = new System.Windows.Forms.PictureBox();
+            this.H1 = new System.Windows.Forms.PictureBox();
+            this.H3 = new System.Windows.Forms.PictureBox();
+            this.H2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Pic4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic2)).BeginInit();
@@ -46,6 +49,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pic7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H2)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -141,12 +147,48 @@
             this.Pic5.TabStop = false;
             this.Pic5.Click += new System.EventHandler(this.Pic_Click);
             // 
+            // H1
+            // 
+            this.H1.BackgroundImage = global::Memory_Thatcher.Properties.Resources.heart1;
+            this.H1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.H1.Location = new System.Drawing.Point(1130, 12);
+            this.H1.Name = "H1";
+            this.H1.Size = new System.Drawing.Size(89, 83);
+            this.H1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.H1.TabIndex = 8;
+            this.H1.TabStop = false;
+            // 
+            // H3
+            // 
+            this.H3.BackgroundImage = global::Memory_Thatcher.Properties.Resources.heart1;
+            this.H3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.H3.Location = new System.Drawing.Point(914, 12);
+            this.H3.Name = "H3";
+            this.H3.Size = new System.Drawing.Size(89, 83);
+            this.H3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.H3.TabIndex = 9;
+            this.H3.TabStop = false;
+            // 
+            // H2
+            // 
+            this.H2.BackgroundImage = global::Memory_Thatcher.Properties.Resources.heart1;
+            this.H2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.H2.Location = new System.Drawing.Point(1025, 12);
+            this.H2.Name = "H2";
+            this.H2.Size = new System.Drawing.Size(89, 83);
+            this.H2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.H2.TabIndex = 10;
+            this.H2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Memory_Thatcher.Properties.Resources.PepeBack;
             this.ClientSize = new System.Drawing.Size(1277, 907);
+            this.Controls.Add(this.H2);
+            this.Controls.Add(this.H3);
+            this.Controls.Add(this.H1);
             this.Controls.Add(this.Pic4);
             this.Controls.Add(this.Pic3);
             this.Controls.Add(this.Pic2);
@@ -165,6 +207,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pic7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,6 +225,9 @@
         private System.Windows.Forms.PictureBox Pic3;
         private System.Windows.Forms.PictureBox Pic2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox H1;
+        private System.Windows.Forms.PictureBox H3;
+        private System.Windows.Forms.PictureBox H2;
     }
 }
 
