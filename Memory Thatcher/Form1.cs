@@ -25,10 +25,26 @@ namespace Memory_Thatcher
 		private bool m_IsFirst = true;
 		private PictureBox m_FirstPictureBox;
 		private PictureBox m_SecondPictureBox;
-		public void SetImagesArray()
+
+		private void Swap(int i, int j)
+		{
+			//Swaps 2 pictures in the image array
+			Image imageTemp = imageArr[i];
+			imageArr[i] = imageArr[j];
+			imageArr[j] = imageTemp;
+		}
+		public void SetImagesArray()	
         {
-			Image[] imageArrNew = { Resources.Pic1, Resources.Pic2, Resources.Pic3, Resources.Pic4 };
+			Image[] imageArrNew = { Resources.Pic1, Resources.Pic1, Resources.Pic2, Resources.Pic2,
+				Resources.Pic3, Resources.Pic3, Resources.Pic4, Resources.Pic4 };
+			Random rnd = new Random();
 			imageArr = imageArrNew;
+			for (int i = 0; i < imageArr.Length; i++)
+			{
+				Swap(i, rnd.Next(imageArr.Length));
+			}
+			
+
 		}
 
 
@@ -82,7 +98,7 @@ namespace Memory_Thatcher
 			else
 			{
                 int imageNum = int.Parse(p.Name.Substring(p.Name.Length - 1)) - 1;
-				p.Image = imageArr[imageNum % 4];
+				p.Image = imageArr[imageNum ];
 
 			}
 
